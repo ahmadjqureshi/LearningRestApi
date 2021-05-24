@@ -24,7 +24,7 @@ namespace EmpolyeeAPI.Models
             return result.Entity;
         }
 
-        public async void DeleteEmployee(int employeeId)
+        public async Task<Employee> DeleteEmployee(int employeeId)
         {
             Employee result = appDbContext.Employees.Where( x => x.ID == employeeId).FirstOrDefault();
 
@@ -32,7 +32,10 @@ namespace EmpolyeeAPI.Models
             {
                 appDbContext.Employees.Remove(result);
                 await appDbContext.SaveChangesAsync();
+
+                return result;
             }
+            return null;
         }
 
         public async Task<Employee> GetEmployee(int employeeId)
