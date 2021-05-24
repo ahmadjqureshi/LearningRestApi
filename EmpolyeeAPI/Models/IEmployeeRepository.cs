@@ -12,6 +12,6 @@ namespace EmpolyeeAPI.Models
         Task<Employee> GetEmployee(int employeeId);
         Task<Employee> AddEmployee(Employee newEmployee);
         Task<Employee> UpdateEmployee(Employee updatedEmplyee);
-        void DeleteEmployee(int employeeId);
+        Task<Employee> DeleteEmployee(int employeeId);
     }
 }
