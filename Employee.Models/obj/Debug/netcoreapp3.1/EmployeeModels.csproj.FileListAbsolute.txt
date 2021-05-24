@@ -1,9 +1,0 @@
-C:\Users\OWNER\source\repos\BlazorTest\Employee.Models\Employee.Models\bin\Debug\netcoreapp3.1\EmployeeModels.deps.json
-C:\Users\OWNER\source\repos\BlazorTest\Employee.Models\Employee.Models\bin\Debug\netcoreapp3.1\EmployeeModels.dll
-C:\Users\OWNER\source\repos\BlazorTest\Employee.Models\Employee.Models\bin\Debug\netcoreapp3.1\EmployeeModels.pdb
-C:\Users\OWNER\source\repos\BlazorTest\Employee.Models\Employee.Models\obj\Debug\netcoreapp3.1\EmployeeModels.csprojAssemblyReference.cache
-C:\Users\OWNER\source\repos\BlazorTest\Employee.Models\Employee.Models\obj\Debug\netcoreapp3.1\EmployeeModels.AssemblyInfoInputs.cache
-C:\Users\OWNER\source\repos\BlazorTest\Employee.Models\Employee.Models\obj\Debug\netcoreapp3.1\EmployeeModels.AssemblyInfo.cs
-C:\Users\OWNER\source\repos\BlazorTest\Employee.Models\Employee.Models\obj\Debug\netcoreapp3.1\EmployeeModels.csproj.CoreCompileInputs.cache
-C:\Users\OWNER\source\repos\BlazorTest\Employee.Models\Employee.Models\obj\Debug\netcoreapp3.1\EmployeeModels.dll
-C:\Users\OWNER\source\repos\BlazorTest\Employee.Models\Employee.Models\obj\Debug\netcoreapp3.1\EmployeeModels.pdb
