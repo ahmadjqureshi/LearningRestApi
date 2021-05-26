@@ -93,5 +93,25 @@ namespace EmpolyeeAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, err.Message);
             }
         }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<Employee>> DeleteEmployee(int id)
+        {
+            try
+            {
+                Employee emp = await employeeRepository.GetEmployee(id);
+
+                if (emp == null)
+                {
+                    return BadRequest($"Employee with ID = {id} not found.");
+                }
+
+                return await employeeRepository.DeleteEmployee(id);
+            }
+            catch (Exception err)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, err.Message);
+            }
+        }
     }
 }
