@@ -13,5 +13,7 @@ namespace EmpolyeeAPI.Models
         Task<Employee> AddEmployee(Employee newEmployee);
         Task<Employee> UpdateEmployee(Employee updatedEmplyee);
         Task<Employee> DeleteEmployee(int employeeId);
+
+        Task<IEnumerable<Employee>> SearchEmp(string firstName, string LastName, string designation);
     }
 }
