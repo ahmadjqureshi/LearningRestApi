@@ -73,5 +73,25 @@ namespace EmpolyeeAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, err.Message);
             }
         }
+
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult<Employee>> UpdateEmployee(int id, Employee employee)
+        {
+            try
+            {
+                Employee emp = await employeeRepository.GetEmployee(id);
+
+                if (emp == null)
+                {
+                    return BadRequest($"Employee with ID = {id} not found.");
+                }
+
+                return await employeeRepository.UpdateEmployee(employee);
+            }
+            catch (Exception err)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, err.Message);
+            }
+        }
     }
 }
