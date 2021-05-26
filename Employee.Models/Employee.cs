@@ -9,7 +9,13 @@ namespace EmployeeModels
     {
         [Key]
         public int ID { get; set; }
+
+        [Required]
+        [MinLength(2)]
         public string FirstName { get; set; }
+
+        [Required]
+        [MinLength(2)]
         public string LastName { get; set; }
 
         public Gender EmpGender { get; set; }
