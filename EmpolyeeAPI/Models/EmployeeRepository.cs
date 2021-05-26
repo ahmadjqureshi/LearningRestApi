@@ -70,5 +70,32 @@ namespace EmpolyeeAPI.Models
 
             return null;
         }
+
+        public async Task<IEnumerable<Employee>> SearchEmp(string firstName, string LastName, string designation)
+        {
+            try
+            {
+                IList<Employee> employees = await appDbContext.Employees.Where(
+                                                  x => x.FirstName.Contains(firstName) ).ToListAsync();
+
+                if (LastName != string.Empty)
+                {
+                    employees = await appDbContext.Employees.Where(
+                                                  x => x.LastName.Contains(LastName)).ToListAsync();
+                }
+
+                if (designation != string.Empty)
+                {
+                    employees = await appDbContext.Employees.Where(
+                                                  x => x.Designation.Contains(designation)).ToListAsync();
+                }
+
+                return employees;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+        }
     }
 }
