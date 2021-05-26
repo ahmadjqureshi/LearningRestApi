@@ -83,7 +83,7 @@ namespace EmpolyeeAPI.Controllers
 
                 if (emp == null)
                 {
-                    return BadRequest($"Employee with ID = {id} not found.");
+                    return NotFound($"Employee with ID = {id} not found.");
                 }
 
                 return await employeeRepository.UpdateEmployee(employee);
@@ -103,7 +103,7 @@ namespace EmpolyeeAPI.Controllers
 
                 if (emp == null)
                 {
-                    return BadRequest($"Employee with ID = {id} not found.");
+                    return NotFound($"Employee with ID = {id} not found.");
                 }
 
                 return await employeeRepository.DeleteEmployee(id);
