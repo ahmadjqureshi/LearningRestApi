@@ -55,6 +55,13 @@ namespace EmpolyeeAPI.Models
 
             if (result != null)
             {
+                result.DepID = updatedEmplyee.DepID;
+                result.Designation = updatedEmplyee.Designation;
+                result.EmpGender = updatedEmplyee.EmpGender;
+                result.FirstName = updatedEmplyee.FirstName;
+                result.LastName = updatedEmplyee.LastName;
+                result.ImagePath = updatedEmplyee.ImagePath;
+
                 appDbContext.Employees.Update(result);
                 await appDbContext.SaveChangesAsync();
 
