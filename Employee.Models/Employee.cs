@@ -23,6 +23,6 @@ namespace EmployeeModels
         public int DepID { get; set; }
         public string Designation { get; set; }
         public string ImagePath { get; set; }
-        
+        public Department Department { get; set; }
     }
 }

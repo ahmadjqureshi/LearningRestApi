@@ -2,6 +2,12 @@
 
 @inherits EmployeeDetailsBase
 
+@if (Emp == null || Emp.Department == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
 <div class="row justify-content-center m-3">
     <div class="card">
         <div class="card-header">
@@ -13,7 +19,7 @@
 
             <h4>@Emp.ID</h4>
             <h4>@Emp.Designation</h4>
-            <h4>@Emp.DepID</h4>
+            <h4>@Emp.Department.DepName</h4>
         </div>
 
         <div class="card-footer text-center">
@@ -24,4 +30,4 @@
     </div>
 </div>
 
-
+}
