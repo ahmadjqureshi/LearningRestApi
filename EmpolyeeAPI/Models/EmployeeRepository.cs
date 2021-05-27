@@ -41,12 +41,13 @@ namespace EmpolyeeAPI.Models
 
         public async Task<Employee> GetEmployee(int employeeId)
         {
-            return await appDbContext.Employees.FirstOrDefaultAsync(x => x.ID == employeeId);
+            return await appDbContext.Employees.Include(x => x.Department)
+                .FirstOrDefaultAsync(x => x.ID == employeeId);
         }
 
         public async Task<IEnumerable<Employee>> GetEmployees()
         {
-            return await appDbContext.Employees.ToListAsync();
+            return await appDbContext.Employees.Include(x => x.Department).ToListAsync();
         }
 
         public async Task<Employee> UpdateEmployee(Employee updatedEmplyee)
