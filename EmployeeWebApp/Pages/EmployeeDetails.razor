@@ -11,18 +11,19 @@ else
 <div class="row justify-content-center m-3">
     <div class="card">
         <div class="card-header">
-            <h1> @Emp.FirstName @Emp.LastName </h1>
+            <h1> @Emp.FirstName @Emp.LastName @MouseCordinates</h1>
         </div>
 
         <div class="card-body text-center" >
-            <img class="card-img-top" src="@Emp.ImagePath"/>
+            <img class="card-img-top" src="@Emp.ImagePath" @onmousemove="Mouse_Move" @onmouseout="Mouse_Out"/>
 
             <h4>@Emp.ID</h4>
             <h4>@Emp.Designation</h4>
             <h4>@Emp.Department.DepName</h4>
+            <button class="btn btn-primary" @onclick="@Button_Click">@ButtonText</button>
         </div>
 
-        <div class="card-footer text-center">
+        <div class="card-footer text-center @CssClass">
             <a href="/" class="btn btn-primary"> Back </a>
             <a href="#" class="btn btn-primary"> Edit </a>
             <a href="#" class="btn btn-danger"> Delete </a>
